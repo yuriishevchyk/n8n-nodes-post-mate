@@ -18,10 +18,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/postmate/n8n-nodes-post-mate.git"
+    "url": "https://github.com/yuriishevchyk/n8n-nodes-post-mate.git"
   },
   "bugs": {
-    "url": "https://github.com/postmate/n8n-nodes-post-mate/issues"
+    "url": "https://github.com/yuriishevchyk/n8n-nodes-post-mate/issues"
   },
   "main": "index.js",
   "scripts": {
