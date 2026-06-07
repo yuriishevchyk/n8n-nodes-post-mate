@@ -1,0 +1,62 @@
+{
+  "name": "n8n-nodes-post-mate",
+  "version": "0.1.0",
+  "description": "n8n community nodes for post mate — schedule, caption and analyse social posts across 13 networks from a workflow",
+  "keywords": [
+    "n8n-community-node-package",
+    "social media",
+    "scheduler",
+    "post mate",
+    "automation"
+  ],
+  "license": "MIT",
+  "homepage": "https://post-mate.com/integrations/n8n",
+  "author": {
+    "name": "post mate",
+    "email": "support@post-mate.com",
+    "url": "https://post-mate.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/postmate/n8n-nodes-post-mate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/postmate/n8n-nodes-post-mate/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials --ext .ts",
+    "lintfix": "eslint nodes credentials --ext .ts --fix",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/PostMateApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/PostMate/PostMate.node.js",
+      "dist/nodes/PostMate/PostMateTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.2",
+    "gulp": "^4.0.2",
+    "n8n-workflow": "*",
+    "prettier": "^3.3.3",
+    "typescript": "~5.3.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
