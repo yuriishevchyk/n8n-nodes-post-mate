@@ -7,14 +7,11 @@ module.exports = {
     sourceType: 'module',
     extraFileExtensions: ['.json'],
   },
-  plugins: ['@typescript-eslint', 'n8n-nodes-base'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-  ],
+  plugins: ['@typescript-eslint'],
+  extends: ['plugin:@typescript-eslint/recommended'],
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    'n8n-nodes-base/node-filename-against-convention': 'error',
-    'n8n-nodes-base/credential-class-name-unsuffixed': 'error',
+    '@typescript-eslint/ban-types': 'off',
   },
 };

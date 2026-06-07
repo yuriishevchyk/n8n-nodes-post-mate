@@ -668,7 +668,8 @@ export class PostMate implements INodeType {
           const credentials = await this.getCredentials('postMateApi');
           const baseUrl = ((credentials.baseUrl as string) ?? 'https://post-mate.com').replace(/\/$/, '');
 
-          responseData = await (this.helpers.request as Function)({
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          responseData = await (this.helpers.request as (...args: any[]) => Promise<any>)({
             method: 'POST',
             url: `${baseUrl}/api/v1/media`,
             headers: { Authorization: `Bearer ${credentials.apiKey as string}` },
